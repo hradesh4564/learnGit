@@ -20,6 +20,7 @@ async def send_mail_handler(payload: dict):
             html_content=personalized_body)
         if 'send_at' in payload:
             message.send_at = SendAt(payload['send_at'])
+            print(message)
         return message
 
     try:
